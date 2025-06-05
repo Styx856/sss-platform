@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ _('Kayıt Ol') }}</h2>
+
+<!-- Flash mesajları -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        <li class="flash-{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<form method="POST" action="/register" class="form-box">
+    <label for="username">{{ _('Kullanıcı Adı') }}:</label>
+    <input type="text" id="username" name="username" required autocomplete="username"><br>
+    <label for="password">{{ _('Şifre') }}:</label>
+    <input type="password" id="password" name="password" required autocomplete="new-password"><br>
+    <button type="submit">{{ _('Kayıt Ol') }}</button>
+</form>
+<p>{{ _('Zaten hesabınız var mı?') }} <a href="{{ url_for('login') }}">{{ _('Giriş Yap') }}</a></p>
+{% endblock %}

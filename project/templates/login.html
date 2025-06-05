@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ _('Giriş Yap') }}</h2>
+
+<!-- Flash mesajları -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        <li class="flash-{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<form method="POST" action="/login" class="form-box">
+    <label for="username">{{ _('Kullanıcı Adı') }}:</label>
+    <input type="text" id="username" name="username" required autocomplete="username"><br>
+    <label for="password">{{ _('Şifre') }}:</label>
+    <input type="password" id="password" name="password" required autocomplete="current-password"><br>
+    <button type="submit">{{ _('Giriş') }}</button>
+    <br>
+    <a href="{{ url_for('forgot_password') }}" style="font-size:0.97em;display:inline-block;margin-top:10px;">{{ _('Şifrenizi mi unuttunuz?') }}</a>
+</form>
+<p>{{ _('Hesabınız yok mu?') }} <a href="{{ url_for('register') }}">{{ _('Kayıt Ol') }}</a></p>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ _('Önerdiğim Sorular') }}</h2>
+
+<!-- Flash mesajları -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        <li class="flash-{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<ul class="faq-list">
+    {% for question in questions %}
+    <li>
+        <strong>{{ question.question_text }}</strong>
+    </li>
+    {% else %}
+    <li>{{ _('Henüz önerdiğiniz bir soru yok.') }}</li>
+    {% endfor %}
+</ul>
+<p><a href="{{ url_for('faq_list') }}" class="btn">{{ _('SSS Listesine Dön') }}</a></p>
+{% endblock %}

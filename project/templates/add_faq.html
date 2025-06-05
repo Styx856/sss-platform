@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ _('Yeni SSS Ekle (Yetkili)') }}</h2>
+
+<!-- Flash mesajları -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        <li class="flash-{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% if question_requests and question_requests|length > 0 %}
+<div class="form-box" style="margin-top:30px;">
+    <h3>{{ _('Kullanıcıların Önerdiği Sorular') }}</h3>
+    <ul class="faq-list">
+        {% for q in question_requests %}
+        <li>
+            <strong>{{ q.question_text }}</strong>
+            <form method="POST" action="{{ url_for('add_suggested_faq', suggestion_id=q._id) }}" style="display:inline;">
+                <button type="submit">{{ _('Öneriyi Ekle') }}</button>
+            </form>
+            <form method="POST" action="{{ url_for('delete_suggested_faq', suggestion_id=q._id) }}" style="display:inline; margin-left:8px;">
+                <button type="submit" onclick="return confirmDelete(this);">{{ _('Öneriyi Sil') }}</button>
+                <input type="hidden" class="delete-msg" value="{{ _('Bu öneri silinsin mi?')|e }}">
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<form method="POST" action="/add-faq" class="form-box">
+    <label for="question">{{ _('Soru') }}:</label>
+    <input type="text" id="question" name="question" required placeholder="{{ _('SSS sorusunu giriniz') }}"><br>
+    <label for="answer">{{ _('Cevap') }}:</label>
+    <textarea id="answer" name="answer" rows="4" required placeholder="{{ _('Cevabı buraya yazınız...') }}"></textarea><br>
+    <label for="category">{{ _('Kategori') }}:</label>
+    <select id="category" name="category" required>
+        <option value="">{{ _('Kategori seçiniz') }}</option>
+        <option value="Çift Anadal">{{ _('Çift Anadal') }}</option>
+        <option value="Kayıt">{{ _('Kayıt') }}</option>
+        <option value="Yurt">{{ _('Yurt') }}</option>
+        <option value="Kimlik">{{ _('Kimlik') }}</option>
+        <option value="Ders">{{ _('Ders') }}</option>
+        <option value="Not">{{ _('Not') }}</option>
+        <option value="Yaz Okulu">{{ _('Yaz Okulu') }}</option>
+        <option value="Yatay Geçiş">{{ _('Yatay Geçiş') }}</option>
+        <option value="Staj">{{ _('Staj') }}</option>
+    </select><br>
+    <button type="submit">{{ _('Ekle') }}</button>
+</form>
+
+<p><a href="{{ url_for('faq_list') }}">{{ _('SSS Listesine Dön') }}</a></p>
+
+<script>
+function confirmDelete(btn) {
+    var msg = btn.parentNode.querySelector('.delete-msg').value;
+    return confirm(msg);
+}
+</script>
+{% endblock %}

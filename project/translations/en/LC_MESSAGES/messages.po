@@ -1,0 +1,558 @@
+# English translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-03 16:06+0300\n"
+"PO-Revision-Date: 2025-06-03 15:59+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/add_faq.html:3
+msgid "Yeni SSS Ekle (Yetkili)"
+msgstr "Add New FAQ (Admin)"
+
+#: templates/add_faq.html:17 templates/edit_faq.html:17
+msgid "Soru"
+msgstr "Question"
+
+#: templates/add_faq.html:18
+msgid "SSS sorusunu giriniz"
+msgstr "Enter the FAQ question"
+
+#: templates/add_faq.html:19 templates/edit_faq.html:19
+msgid "Cevap"
+msgstr "Answer"
+
+#: templates/add_faq.html:20
+msgid "Cevabı buraya yazınız..."
+msgstr "Write the answer here..."
+
+#: templates/add_faq.html:21
+msgid "Ekle"
+msgstr "Add"
+
+#: templates/add_faq.html:26
+msgid "Kullanıcıların Önerdiği Sorular"
+msgstr "User Suggested Questions"
+
+#: templates/add_faq.html:35 templates/ask_question.html:21 templates/edit_faq.html:23 templates/my_questions.html:25
+msgid "SSS Listesine Dön"
+msgstr "Back to FAQ List"
+
+#: templates/ask_question.html:3
+msgid "Yeni Soru Öner"
+msgstr "Suggest a New Question"
+
+#: templates/ask_question.html:17
+msgid "Sorunuz"
+msgstr "Your Question"
+
+#: templates/ask_question.html:18
+msgid "Sorunuzu buraya yazınız..."
+msgstr "Write your question here..."
+
+#: templates/ask_question.html:19
+msgid "Gönder"
+msgstr "Send"
+
+#: templates/base.html:5 templates/base.html:47
+msgid "Üniversite SSS Platformu"
+msgstr "University FAQ Platform"
+
+#: templates/base.html:17
+msgid "SSS Platformu"
+msgstr "FAQ Platform"
+
+#: templates/base.html:20
+msgid "Merhaba"
+msgstr "Hello"
+
+#: templates/base.html:21 templates/base.html:31
+msgid "SSS"
+msgstr "FAQ"
+
+#: templates/base.html:22 templates/faq_list.html:40
+msgid "Soru Öner"
+msgstr "Suggest Question"
+
+#: templates/base.html:23 templates/faq_list.html:41 templates/my_questions.html:3
+msgid "Önerdiğim Sorular"
+msgstr "My Suggested Questions"
+
+#: templates/base.html:25 templates/faq_list.html:43
+msgid "Yeni SSS Ekle"
+msgstr "Add New FAQ"
+
+#: templates/base.html:27
+msgid "Çıkış"
+msgstr "Logout"
+
+#: templates/base.html:29 templates/login.html:21
+msgid "Giriş"
+msgstr "Login"
+
+#: templates/base.html:30 templates/login.html:25 templates/register.html:3 templates/register.html:21
+msgid "Kayıt Ol"
+msgstr "Register"
+
+#: templates/edit_faq.html:3
+msgid "SSS Düzenle"
+msgstr "Edit FAQ"
+
+#: templates/edit_faq.html:21
+msgid "Güncelle"
+msgstr "Update"
+
+#: templates/faq_list.html:3
+msgid "Sıkça Sorulan Sorular"
+msgstr "Frequently Asked Questions"
+
+#: templates/faq_list.html:17
+msgid "Soru veya konu ara..."
+msgstr "Search question or topic..."
+
+#: templates/faq_list.html:18
+msgid "Ara"
+msgstr "Search"
+
+#: templates/faq_list.html:19
+msgid "Tümünü Göster"
+msgstr "Show All"
+
+#: templates/faq_list.html:29
+msgid "Sil"
+msgstr "Delete"
+
+#: templates/faq_list.html:31
+msgid "Düzenle"
+msgstr "Edit"
+
+#: templates/faq_list.html:35
+msgid "Hiç SSS bulunamadı."
+msgstr "No FAQs found."
+
+#: templates/faq_list.html:46
+msgid "Giriş yaparak"
+msgstr "By logging in"
+
+#: templates/faq_list.html:46
+msgid "soru önerebilirsiniz."
+msgstr "you can suggest a question."
+
+#: templates/forgot_password.html:3
+msgid "Şifre Sıfırlama"
+msgstr "Password Reset"
+
+#: templates/forgot_password.html:17 templates/login.html:17 templates/register.html:17
+msgid "Kullanıcı Adı"
+msgstr "Username"
+
+#: templates/forgot_password.html:18
+msgid "Kullanıcı adınızı giriniz"
+msgstr "Enter your username"
+
+#: templates/forgot_password.html:19
+msgid "Devam Et"
+msgstr "Continue"
+
+#: templates/forgot_password.html:21 templates/reset_password.html:22
+msgid "Girişe Dön"
+msgstr "Back to Login"
+
+#: templates/login.html:3 templates/register.html:23
+msgid "Giriş Yap"
+msgstr "Sign In"
+
+#: templates/login.html:19 templates/register.html:19
+msgid "Şifre"
+msgstr "Password"
+
+#: templates/login.html:23
+msgid "Şifrenizi mi unuttunuz?"
+msgstr "Forgot your password?"
+
+#: templates/login.html:25
+msgid "Hesabınız yok mu?"
+msgstr "Don't have an account?"
+
+#: templates/my_questions.html:22
+msgid "Henüz önerdiğiniz bir soru yok."
+msgstr "You haven't suggested any questions yet."
+
+#: templates/register.html:23
+msgid "Zaten hesabınız var mı?"
+msgstr "Already have an account?"
+
+#: templates/reset_password.html:3
+msgid "Yeni Şifre Belirle"
+msgstr "Set New Password"
+
+#: templates/reset_password.html:18
+msgid "Yeni Şifre"
+msgstr "New Password"
+
+#: templates/reset_password.html:19
+msgid "Yeni şifrenizi giriniz"
+msgstr "Enter your new password"
+
+#: templates/reset_password.html:20
+msgid "Şifreyi Güncelle"
+msgstr "Update Password"
+
+#: venv_babel/Lib/site-packages/click/_termui_impl.py:600
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/_termui_impl.py:604
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:1084
+#: venv_babel/Lib/site-packages/click/core.py:1121
+#, python-brace-format
+msgid "{text} {deprecated_message}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:1140
+msgid "Options"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:1202
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv_babel/Lib/site-packages/click/core.py:1221
+#, python-brace-format
+msgid "DeprecationWarning: The command {name!r} is deprecated.{extra_message}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:1405
+msgid "Aborted!"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:1779
+msgid "Commands"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:1810
+msgid "Missing command."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:1888
+#, python-brace-format
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:2303
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:2324
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv_babel/Lib/site-packages/click/core.py:2404
+#, python-brace-format
+msgid ""
+"DeprecationWarning: The {param_type} {name!r} is "
+"deprecated.{extra_message}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:2807
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:2810
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:2814
+msgid "required"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/core.py:2870
+msgid "(dynamic)"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/decorators.py:522
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/decorators.py:548
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:50
+#: venv_babel/Lib/site-packages/click/exceptions.py:89
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:81
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:130
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:132
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:190
+msgid "Missing argument"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:192
+msgid "Missing option"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:194
+msgid "Missing parameter"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:196
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:203
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:223
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:235
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:282
+msgid "unknown error"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/exceptions.py:289
+#, python-brace-format
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/formatting.py:156
+msgid "Usage:"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/parser.py:200
+#, python-brace-format
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/parser.py:383
+#, python-brace-format
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/parser.py:444
+#, python-brace-format
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv_babel/Lib/site-packages/click/shell_completion.py:326
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/shell_completion.py:333
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/termui.py:162
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/termui.py:178
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/termui.py:180
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/termui.py:191
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/termui.py:247
+msgid "Error: invalid input"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/termui.py:866
+msgid "Press any key to continue..."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:332
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:369
+#, python-brace-format
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv_babel/Lib/site-packages/click/types.py:460
+#, python-brace-format
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv_babel/Lib/site-packages/click/types.py:482
+#, python-brace-format
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:538
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:679
+#, python-brace-format
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:703
+#, python-brace-format
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:893
+msgid "file"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:895
+msgid "directory"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:897
+msgid "path"
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:944
+#, python-brace-format
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:953
+#, python-brace-format
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:961
+#, python-brace-format
+msgid "{name} {filename!r} is a directory."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:970
+#, python-brace-format
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:979
+#, python-brace-format
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:988
+#, python-brace-format
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv_babel/Lib/site-packages/click/types.py:1055
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/add_faq.html templates/faq_list.html
+msgid "Çift Anadal"
+msgstr "Double Major"
+
+msgid "Kayıt"
+msgstr "Registration"
+
+msgid "Yurt"
+msgstr "Dormitory"
+
+msgid "Kimlik"
+msgstr "ID Card"
+
+msgid "Ders"
+msgstr "Course"
+
+msgid "Not"
+msgstr "Grade"
+
+msgid "Yaz Okulu"
+msgstr "Summer School"
+
+msgid "Yatay Geçiş"
+msgstr "Transfer"
+
+msgid "Staj"
+msgstr "Internship"
+
+msgid "Kategori seçiniz"
+msgstr "Select category"
+
+msgid "Kategori"
+msgstr "Category"
+
+msgid "Tüm Kategoriler"
+msgstr "All Categories"
+
+msgid "Kategorisiz"
+msgstr "No Category"
+

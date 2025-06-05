@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ _('Sıkça Sorulan Sorular') }}</h2>
+
+<!-- Kategori filtre butonları -->
+<div style="margin-bottom: 16px;">
+    <a href="{{ url_for('faq_list') }}" class="btn {% if not category %}active{% endif %}">{{ _('Tüm Kategoriler') }}</a>
+    {% for cat in categories %}
+        <a href="{{ url_for('faq_list', category=cat) }}" class="btn {% if category == cat %}active{% endif %}">{{ _(cat) }}</a>
+    {% endfor %}
+</div>
+
+<!-- Flash mesajları -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        <li class="flash-{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<form method="GET" action="/faq" class="form-box">
+    <input type="text" name="query" placeholder="{{ _('Soru veya konu ara...') }}" value="{{ query|default('') }}">
+    <button type="submit">{{ _('Ara') }}</button>
+    {% if query %}<a href="{{ url_for('faq_list') }}">{{ _('Tümünü Göster') }}</a>{% endif %}
+</form>
+
+<ul class="faq-list">
+    {% for faq in faqs %}
+    <li class="faq-item">
+        <strong>{{ faq.question }}</strong>
+        <span style="background:#eee; color:#333; font-size:0.9em; padding:2px 8px; border-radius:8px; margin-left:8px;">{{ _(faq.category) if faq.category else _('Kategorisiz') }}</span><br>
+        <span>{{ faq.answer }}</span>
+        {% if session.role == 'admin' %}
+        <form method="POST" action="{{ url_for('delete_faq', faq_id=faq._id) }}" style="display:inline;">
+            <button type="submit" onclick="return confirm(_('Bu SSS silinsin mi?'))">{{ _('Sil') }}</button>
+        </form>
+        <a href="{{ url_for('edit_faq', faq_id=faq._id) }}">{{ _('Düzenle') }}</a>
+        {% endif %}
+    </li>
+    {% else %}
+    <li>{{ _('Hiç SSS bulunamadı.') }}</li>
+    {% endfor %}
+</ul>
+
+{% if session.username %}
+    <a href="{{ url_for('ask_question') }}" class="btn">{{ _('Soru Öner') }}</a>
+    <a href="{{ url_for('my_questions') }}" class="btn">{{ _('Önerdiğim Sorular') }}</a>
+    {% if session.role == 'admin' %}
+        <a href="{{ url_for('add_faq') }}" class="btn">{{ _('Yeni SSS Ekle') }}</a>
+    {% endif %}
+{% else %}
+    <p><a href="{{ url_for('login') }}">{{ _('Giriş yaparak') }}</a> {{ _('soru önerebilirsiniz.') }}</p>
+{% endif %}
+{% endblock %}

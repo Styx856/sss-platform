@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ g.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ _('Üniversite SSS Platformu') }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <style>
+        .lang-switch { position: absolute; top: 18px; right: 30px; }
+        .lang-switch a { 
+            text-decoration: none; 
+            color: #fff; 
+            font-weight: bold; 
+            margin-left: 8px; 
+            font-size: 1em;
+        }
+        .lang-switch a.active { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="/">{{ _('SSS Platformu') }}</a></h1>
+        <nav>
+            {% if session.username %}
+                <span>{{ _('Merhaba') }}, <strong>{{ session.username }}</strong>!</span>
+                <a href="{{ url_for('faq_list') }}">{{ _('SSS') }}</a>
+                <a href="{{ url_for('ask_question') }}">{{ _('Soru Öner') }}</a>
+                <a href="{{ url_for('my_questions') }}">{{ _('Önerdiğim Sorular') }}</a>
+                {% if session.role == 'admin' %}
+                    <a href="{{ url_for('add_faq') }}">{{ _('Yeni SSS Ekle') }}</a>
+                {% endif %}
+                <a href="{{ url_for('logout') }}">{{ _('Çıkış') }}</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">{{ _('Giriş') }}</a>
+                <a href="{{ url_for('register') }}">{{ _('Kayıt Ol') }}</a>
+                <a href="{{ url_for('faq_list') }}">{{ _('SSS') }}</a>
+            {% endif %}        </nav>        <div class="lang-switch">
+            <a href="{{ url_for('set_language', lang='tr') }}" class="{% if g.lang == 'tr' %}active{% endif %}">TR</a>
+            <a href="{{ url_for('set_language', lang='en') }}" class="{% if g.lang == 'en' %}active{% endif %}">EN</a>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <hr>
+        <p style="text-align:center; color:#888;">&copy; {{ 2025 }} {{ _('Üniversite SSS Platformu') }}</p>
+    </footer>
+</body>
+</html>

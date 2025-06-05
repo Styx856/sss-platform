@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ _('Yeni Soru Öner') }}</h2>
+
+<!-- Flash mesajları -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        <li class="flash-{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<form method="POST" action="/ask" class="form-box">
+    <label for="question_text">{{ _('Sorunuz') }}:</label><br>
+    <textarea id="question_text" name="question_text" rows="4" required placeholder="{{ _('Sorunuzu buraya yazınız...') }}"></textarea><br>
+    <button type="submit">{{ _('Gönder') }}</button>
+</form>
+<p><a href="{{ url_for('faq_list') }}">{{ _('SSS Listesine Dön') }}</a></p>
+{% endblock %}
